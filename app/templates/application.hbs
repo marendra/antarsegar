@@ -1,0 +1,45 @@
+<nav class="navbar navbar-light bg-faded">
+
+  <!-- Toggle Button -->
+  <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#nav-content">
+    ☰
+  </button>
+
+  <!-- Nav Content -->
+  <div class="collapse navbar-toggleable-xs" id="nav-content">
+    {{#link-to "index" class="navbar-brand"}}
+      AntarSegar<img src="/assets/images/iconSmall.png" class="navbar-brand">
+    {{/link-to}}
+
+<ul class="nav navbar-nav float-md-left">
+  <li class="nav-item">
+{{#if user.buyer}}
+      {{#link-to "buyerPage" class="nav-link"}}Buyer{{/link-to}}
+{{/if}}
+  </li>
+</ul>
+
+
+    <ul class="nav navbar-nav float-md-right">
+      <li class="nav-item">
+
+
+
+        {{#if session.isAuthenticated}}
+          {{#link-to "logout" class="nav-link" }}
+            <i class="fa fa-sign-out"></i>
+            Log Out{{/link-to}}
+        {{else}}
+          {{#link-to "login" class="nav-link"}}
+            <i class="fa fa-sign-in"></i>
+            Login{{/link-to}}
+        {{/if}}
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<div style="margin-top: 20px">
+  {{outlet}}
+</div>

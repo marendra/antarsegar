@@ -5,7 +5,15 @@ module.exports = function(environment) {
     modulePrefix: 'antar-segar',
     environment: environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'auto', firebase:{
+      apiKey: "AIzaSyDH1y2y0xthF68Lx8WGKyhiHJRGDkhnt-A",
+      authDomain: "antarsegar.firebaseapp.com",
+      databaseURL: "https://antarsegar.firebaseio.com",
+      storageBucket: "antarsegar.appspot.com",
+      messagingSenderId: "186575763015"
+    }, torii: {
+      sessionServiceName: 'session'
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

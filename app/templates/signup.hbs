@@ -1,0 +1,32 @@
+{{#each flashMessages.queue as |flash|}}
+  {{flash-message flash=flash}}
+{{/each}}
+
+<div class=" Absolute-Center is-Responsive">
+
+  <div class="card">
+    <div class="card-header">
+      <i class="fa fa-user-plus" aria-hidden="true"></i>
+      Please Sign Up
+    </div>
+    <div class="card-block">
+      <form accept-charset="UTF-8" role="form" {{action "signup" on="submit"}}>
+        <fieldset>
+          <div class="form-group">
+            {{input type="text" value=email placeholder="email" class="form-control"}}
+          </div>
+          <div class="form-group">
+            {{input type="password" value=password placeholder="password" class="form-control"}}
+          </div>
+          <div class="form-group">
+            {{input type="password" value=rePassword placeholder="Retype your password" class="form-control"}}
+          </div>
+
+          <input class="btn btn-lg btn-success btn-block" type="submit" value="Sign Up">
+
+        </fieldset>
+        {{#link-to "login"}}Back to Login{{/link-to}}
+      </form>
+    </div>
+  </div>
+</div>
